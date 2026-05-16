@@ -1,46 +1,81 @@
-# Python
+# =============================================
+# PYTHON
+# =============================================
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-.Python
 *.egg-info/
 dist/
 build/
 *.egg
 
-# Virtual Environments
+# =============================================
+# VIRTUAL ENVIRONMENTS
+# =============================================
 venv/
 env/
 .venv/
+ENV/
 
-# Jupyter Notebooks checkpoints
+# =============================================
+# JUPYTER
+# =============================================
 .ipynb_checkpoints/
 
-# ML Models (large binary files)
+# =============================================
+# ML MODELS (large binary files – generate locally)
+# =============================================
 models/*.h5
+models/*.keras
 models/*.pkl
 models/*.npy
 models/*.png
+models/*.json
 
-# Large Dataset files
-data/*.csv
+# =============================================
+# DATASETS (large CSV files – place locally)
+# =============================================
+data/
 Hospitalmanagementdataset/
 
-# Scratch / temp files
+# =============================================
+# SCRATCH / TEMP / DEV FILES
+# =============================================
 scratch/
+*.tmp
+*.bak
+*.swp
 
-# Logs
+# =============================================
+# LOGS & OUTPUTS
+# =============================================
 *.log
 train_log.txt
+visualizations/
 
-# Streamlit cache
+# =============================================
+# RAW PROPOSAL / INTERNAL DOCS (keep README only)
+# =============================================
+"PROJECT PROPOSAL for abm and ann lab.pdf"
+*.pdf
+
+# =============================================
+# STREAMLIT CACHE
+# =============================================
 .streamlit/
 
-# OS files
+# =============================================
+# OS FILES
+# =============================================
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# IDE
+# =============================================
+# IDE / EDITOR
+# =============================================
 .vscode/
 .idea/
+*.suo
+*.user
