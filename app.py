@@ -63,16 +63,24 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# --- DEMO MODE DETECTION ---
+# On Streamlit Cloud, trained models are not present (excluded from git).
+# DEMO_MODE = True means the app uses simulated/mock data gracefully.
+DEMO_MODE = not os.path.exists('models/trained_ann_regression.h5')
+
 # --- CACHED RESOURCES ---
 @st.cache_resource
 def load_ai_models():
     ann_path = 'models/trained_ann_regression.h5'
     scaler_path = 'models/scaler.pkl'
     if os.path.exists(ann_path):
-        model = tf.keras.models.load_model(ann_path, compile=False)
-        scaler = joblib.load(scaler_path)
-        feature_names = joblib.load('models/feature_names.pkl')
-        return model, scaler, feature_names
+        try:
+            model = tf.keras.models.load_model(ann_path, compile=False)
+            scaler = joblib.load(scaler_path)
+            feature_names = joblib.load('models/feature_names.pkl')
+            return model, scaler, feature_names
+        except Exception:
+            pass
     return None, None, None
 
 # --- PAKISTAN LOCALISATION CONSTANTS ---
@@ -129,16 +137,20 @@ reset_sim = st.sidebar.button("Reset Simulation", use_container_width=True)
 
 # --- INITIALIZATION ---
 if 'model' not in st.session_state or reset_sim:
-    st.session_state.model = HospitalModel(
-        hospital_data_path='data/emergencyRooms.csv',
-        ann_model_path='models/trained_ann_regression.h5',
-        scaler_path='models/scaler.pkl',
-        arrival_rate=arrival_rate,
-        num_doctors_per_hosp=num_doctors,
-        covid_risk=covid_risk,
-        fatigue_multiplier=fatigue_multiplier,
-        patience_threshold=patience_threshold
-    )
+    try:
+        st.session_state.model = HospitalModel(
+            hospital_data_path='data/emergencyRooms.csv',
+            ann_model_path='models/trained_ann_regression.h5' if not DEMO_MODE else None,
+            scaler_path='models/scaler.pkl' if not DEMO_MODE else None,
+            arrival_rate=arrival_rate,
+            num_doctors_per_hosp=num_doctors,
+            covid_risk=covid_risk,
+            fatigue_multiplier=fatigue_multiplier,
+            patience_threshold=patience_threshold
+        )
+    except Exception as e:
+        st.error(f"Model init error: {e}")
+        st.stop()
     st.session_state.history = []
     st.session_state.start_time = time.time()
 
@@ -149,6 +161,9 @@ with col_logo:
 with col_title:
     st.markdown("<h2 style='margin-top: 0; padding-top: 0;'>Hospital Queue Management – AI & ABM</h2>", unsafe_allow_html=True)
     st.caption(f"Current Date & Time: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+if DEMO_MODE:
+    st.info("🖥️ **Demo Mode** – Running without trained models. ABM simulation is fully live; AI predictions use rule-based estimates. To enable full AI, train the models locally and deploy with `models/` directory.", icon="ℹ️")
 
 # LIVE HOSPITAL STATUS SECTION
 current_stats = st.session_state.model.datacollector.get_model_vars_dataframe()

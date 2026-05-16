@@ -36,8 +36,10 @@ models/*.json
 # =============================================
 # DATASETS (large CSV files – place locally)
 # =============================================
-data/
+data/attendances.csv
+data/COVIDLocalRiskValuation.csv
 Hospitalmanagementdataset/
+# NOTE: data/emergencyRooms.csv IS tracked (only 3.2 KB, needed for ABM)
 
 # =============================================
 # SCRATCH / TEMP / DEV FILES

@@ -1,0 +1,21 @@
+emergency_room,is_pediatric,hospital,healthcare_company,longitude,latitude,address,hamlet,city,telephone_number,notes
+Pronto Soccorso Burlo,True,IRCCS Burlo Garofolo,,13.786184,45.635235,"Via dell'Istria, 65/1",,Trieste,,
+Pronto Soccorso Spilimbergo,False,Ospedale di Spilimbergo,AS - Friuli Occidentale,12.891937,46.111412,"Via Raffaello Sanzio, 1",,Spilimbergo,,
+Pronto Soccorso Pordenone,False,Ospedale di Pordenone,AS - Friuli Occidentale,12.653186,45.966145,"Via Montereale, 24",,Pordenone,,
+Punto di Primo Intervento Sacile,False,Presidio Ospedaliero per la Salute di Sacile,AS - Friuli Occidentale,12.500212,45.955887,"Via Ettoreo, 4",,Sacile,,Open every day from 8:00 to 20:00
+Pronto Soccorso Pediatrico Pordenone,True,Ospedale di Pordenone,AS - Friuli Occidentale,12.653186,45.966145,"Via Montereale, 24",,Pordenone,,
+Pronto Soccorso San Vito al Tagliamento,False,Ospedale di San Vito al Tagliamento,AS - Friuli Occidentale,12.856985,45.912205,"Via Savorgnano, 2",,San Vito al Tagliamento,,
+Punto di Primo Intervento Maniago,False,Presidio Ospedaliero di Maniago,AS - Friuli Occidentale,12.715642,46.172139,"Via Unità d'Italia, 19",,Maniago,,Closed due to COVID situation
+Pronto Soccorso Palmanova,False,Presidio Ospedaliero di Palmanova,ASU - Friuli Centrale,13.335027,45.910343,"Via Natisone, 11",Jalmicco,Palmanova,,
+Punto di Primo Intervento Lignano,False,Presidio Ospedaliero di Latisana,ASU - Friuli Centrale,13.12161,45.682606,Via Tarvisio angolo Mezza Sacca,,Lignano Sabbiadoro,,Open from May to September
+Pronto Soccorso Latisana,False,Presidio Ospedaliero di Latisana,ASU - Friuli Centrale,13.00133,45.76895,"Via Sabbionera, 45",,Latisana,,
+Pronto Soccorso Tolmezzo,False,Presidio Ospedaliero di Tolmezzo,ASU - Friuli Centrale,13.006582,46.404987,"Via Morgagni, 18",,Tolmezzo,,
+Pronto Soccorso San Daniele,False,Presidio Ospedaliero di San Daniele,ASU - Friuli Centrale,13.009645,46.154564,"Via Trento Trieste, 33",,San Daniele del Friuli,,
+Pronto Soccorso Udine,False,"Presidio Ospedaliero Universitario ""Santa Maria della Misericordia""",ASU - Friuli Centrale,13.226995,46.07822,"Piazzale Santa Maria della Misericordia, 1",,Udine,,
+Pronto Soccorso Pediatrico Udine,True,"Presidio Ospedaliero Universitario ""Santa Maria della Misericordia""",ASU - Friuli Centrale,13.226995,46.07822,"Piazzale Santa Maria della Misericordia, 1",,Udine,,
+Punto di Primo Intervento Gemona,False, Presidio Ospedaliero per la Salute di Gemona, ASU - Friuli Centrale,13.125122,46.287003,"Piazza Rodolone, 2",,Gemona del Friuli,,Closed due to COVID situation
+Pronto Soccorso Gorizia,False,Ospedale di Gorizia,ASU - Giuliano Isontina,13.606712,45.935135,"Viale Fatebenefratelli, 34",,Gorizia,,
+Pronto Soccorso Monfalcone,False,Ospedale di Monfalcone,ASU - Giuliano Isontina,13.518794,45.81529,"Via Galvani, 1",,Monfalcone,,
+Pronto Soccorso Maggiore,False,Ospedale Maggiore,ASU - Giuliano Isontina,13.783198,45.65055,"Via Gatteri, 25/1",,Trieste,,Open every day from 8:00 to 19:30
+Pronto Soccorso Cattinara,False,Ospedale di Cattinara,ASU - Giuliano Isontina,13.826269,45.634872,"Strada di Fiume, 447",,Trieste,,
+Punto di Primo Intervento Grado,False,Presidio Ospedaliero di Grado,ASU - Giuliano Isontina,13.382563,45.679016,"Via Buonarrotti, 10",,Grado,,
